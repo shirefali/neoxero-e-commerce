@@ -9,7 +9,7 @@ const SaleSection = () => {
         <div className="flex-1 flex justify-center items-center gap-1 md:font-medium">
           30% off storewide -- Limited time! Shop Now
           <span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 cursor-pointer" />
           </span>
         </div>
 

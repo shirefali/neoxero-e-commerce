@@ -24,7 +24,9 @@ const Navbar = () => {
           >
             <Menu className="w-6 h-6" />
           </button>
-          <h1 className="text-3xl font-bold cursor-pointer">VisioCreate.</h1>
+          <h1 className="text-2xl md:text-3xl font-bold cursor-pointer">
+            VisioCreate.
+          </h1>
         </div>
 
         <div className="hidden md:flex items-center gap-8">
@@ -35,11 +37,9 @@ const Navbar = () => {
               smooth={item.smooth}
               duration={scrollProps.duration}
               offset={scrollProps.offset}
-              className={
-                item.showChevron
-                  ? "flex items-center gap-1 cursor-pointer"
-                  : "cursor-pointer"
-              }
+              className={`${
+                item.showChevron && "flex items-center gap-1"
+              } cursor-pointer`}
             >
               {item.label}
               {item.showChevron && (
