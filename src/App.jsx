@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import LowPriceSection from "./components/LowPriceSection";
 import Navbar from "./components/Nabar";
@@ -17,6 +18,7 @@ function App() {
       <LowPriceSection />
       <PromoSection />
       <OurServiceSection />
+      <Footer />
     </>
   );
 }
