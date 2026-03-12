@@ -2,7 +2,7 @@ import { Play } from "lucide-react";
 
 const PromoSection = () => {
   return (
-    <section className="w-full py-16 px-4">
+    <section className="py-16 px-4">
       <div className="container mx-auto text-center">
         {/* title */}
         <div>
