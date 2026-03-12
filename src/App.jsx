@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import LowPriceSection from "./components/LowPriceSection";
 import Navbar from "./components/Nabar";
+import NewsFeedSection from "./components/NewsFeedSection";
 import OurServiceSection from "./components/OurServiceSection";
 import PromoSection from "./components/PromoSection";
 import SaleSection from "./components/SaleSection";
@@ -17,6 +18,7 @@ function App() {
       <TrendingBrandsSection />
       <LowPriceSection />
       <PromoSection />
+      <NewsFeedSection />
       <OurServiceSection />
       <Footer />
     </>

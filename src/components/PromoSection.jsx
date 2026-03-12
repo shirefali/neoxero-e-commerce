@@ -16,8 +16,8 @@ const PromoSection = () => {
             Introducing the new winter jackets.
           </p>
         </div>
-        {/* promo picture  */}
-        <div className="relative rounded-2xl mx-auto overflow-hidden max-w-[1200px] max-h-[500px]">
+        {/* picture  */}
+        <div className="relative rounded-2xl w-full overflow-hidden max-h-[500px]">
           <img
             src="../public/promotion.png"
             alt="promo-image"
