@@ -1,4 +1,5 @@
 import "./App.css";
+import ArticleSection from "./components/ArticlesSection";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import LowPriceSection from "./components/LowPriceSection";
@@ -18,6 +19,7 @@ function App() {
       <TrendingBrandsSection />
       <LowPriceSection />
       <PromoSection />
+      <ArticleSection />
       <NewsFeedSection />
       <OurServiceSection />
       <Footer />
