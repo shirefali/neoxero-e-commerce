@@ -1,5 +1,6 @@
 import "./App.css";
-import ArticleSection from "./components/ArticlesSection";
+import ArticlesSection from "./components/ArticlesSection";
+import CategoriesSection from "./components/CategoriesSection";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import LowPriceSection from "./components/LowPriceSection";
@@ -17,9 +18,10 @@ function App() {
       <Navbar />
       <Hero />
       <TrendingBrandsSection />
+      <CategoriesSection />
       <LowPriceSection />
       <PromoSection />
-      <ArticleSection />
+      <ArticlesSection />
       <NewsFeedSection />
       <OurServiceSection />
       <Footer />
