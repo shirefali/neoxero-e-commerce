@@ -1,6 +1,7 @@
 import "./App.css";
 import ArticlesSection from "./components/ArticlesSection";
 import CategoriesSection from "./components/CategoriesSection";
+import CollectionsSection from "./components/CollectionsSection";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import LowPriceSection from "./components/LowPriceSection";
@@ -19,6 +20,7 @@ function App() {
       <Hero />
       <TrendingBrandsSection />
       <CategoriesSection />
+      <CollectionsSection />
       <LowPriceSection />
       <PromoSection />
       <ArticlesSection />

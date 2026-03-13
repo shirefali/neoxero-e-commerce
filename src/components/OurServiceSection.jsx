@@ -3,28 +3,30 @@ import ServiceCard from "./ServiceCard";
 
 const OurServiceSection = () => {
   return (
-    <section className="py-16">
-      <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
-        <ServiceCard
-          icon={<Truck />}
-          title="free shipping"
-          desc="Order above $200"
-        />
-        <ServiceCard
-          icon={<Banknote />}
-          title="money-back"
-          desc="30 days guarantee"
-        />
-        <ServiceCard
-          icon={<Lock />}
-          title="secure payments"
-          desc="Secured by Stripe"
-        />
-        <ServiceCard
-          icon={<PhoneCall />}
-          title="24/7 support"
-          desc="Phone and Email support"
-        />
+    <section className="py-16 px-4">
+      <div className="container mx-auto py-15 border-t border-gray-200">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <ServiceCard
+            icon={<Truck />}
+            title="free shipping"
+            desc="Order above $200"
+          />
+          <ServiceCard
+            icon={<Banknote />}
+            title="money-back"
+            desc="30 days guarantee"
+          />
+          <ServiceCard
+            icon={<Lock />}
+            title="secure payments"
+            desc="Secured by Stripe"
+          />
+          <ServiceCard
+            icon={<PhoneCall />}
+            title="24/7 support"
+            desc="Phone and Email support"
+          />
+        </div>
       </div>
     </section>
   );
