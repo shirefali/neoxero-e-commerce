@@ -106,7 +106,7 @@ export default function Footer() {
       {/* Bottom part */}
       <div>
         <div className="container border-t px-4 border-gray-200 mx-auto py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-500 text-sm order-2 sm:order-1">
+          <p className="text-gray-500 text-center text-sm order-2 sm:order-1">
             Copyright © 2023 VisioCreate. All rights reserved.
           </p>
           <div className="flex gap-4 text-gray-500 text-sm order-3 sm:order-2">

@@ -17,7 +17,7 @@ const LowPriceSection = () => {
           <span className="text-blue-500 font-semibold tracking-wider uppercase text-semibold">
             Sale Up To 35% Off
           </span>
-          <h2 className="text-4xl lg:text-6xl font-semibold text-gray-900 mt-4">
+          <h2 className="text-3xl lg:text-6xl font-semibold text-gray-900 mt-4">
             HUNDREDS of <br /> New lower prices!
           </h2>
           <p className="text-gray-600 mt-6 text-xl">

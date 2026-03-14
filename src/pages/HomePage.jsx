@@ -1,4 +1,5 @@
 import ArticlesSection from "../components/ArticlesSection";
+import BestSellerSection from "../components/BestSellerSection";
 import CategoriesSection from "../components/CategoriesSection";
 import CollectionsSection from "../components/CollectionsSection";
 import Hero from "../components/Hero";
@@ -17,6 +18,7 @@ function HomePage() {
       <JustInSection />
       <CategoriesSection />
       <CollectionsSection />
+      <BestSellerSection />
       <LowPriceSection />
       <PromoSection />
       <ArticlesSection />
