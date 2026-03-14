@@ -20,9 +20,9 @@ const ArticlesSection = () => {
 
         {/* Article cards*/}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          <ArticlesCard src="../public/article-1.png" />
-          <ArticlesCard src="../public/article-2.png" />
-          <ArticlesCard src="../public/article-3.png" />
+          <ArticlesCard src="/article-1.png" />
+          <ArticlesCard src="/article-2.png" />
+          <ArticlesCard src="/article-3.png" />
         </div>
       </div>
     </section>

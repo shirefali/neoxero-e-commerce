@@ -4,10 +4,10 @@ const NewsFeedSection = () => {
       id: 1,
       src: null,
     },
-    { id: 2, src: "../public/newsfeed2.png" },
+    { id: 2, src: "/newsfeed2.png" },
     {
       id: 3,
-      src: "../public/newsfeed1.png",
+      src: "/newsfeed1.png",
     },
     { id: 4, src: null },
   ];

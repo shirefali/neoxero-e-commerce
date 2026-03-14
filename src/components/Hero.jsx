@@ -22,7 +22,7 @@ const Hero = () => {
           <div className="absolute right-0 bottom-[-100px] w-120 h-120 rounded-full bg-[#066176]"></div>
           <div className="absolute right-0 bottom-50 sm:bottom-30 md:right-[-70px] w-80 h-70 md:w-90 md:h-90 border-8 border-[#066176] z-0"></div>
           <div className="absolute inset-0 z-3 flex items-end justify-center md:right-[-300px] pl-8 lg:pl-30">
-            <img src="../public/hero-img.png" alt="hero-image" />
+            <img src="/hero-img.png" alt="hero-image" />
           </div>
         </div>
       </div>

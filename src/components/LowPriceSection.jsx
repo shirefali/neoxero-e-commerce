@@ -7,7 +7,7 @@ const LowPriceSection = () => {
       <div className="flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 ">
           <img
-            src="../public/pants.png"
+            src="/pants.png"
             alt="pants-image"
             className="w-full h-full object-cover"
           />

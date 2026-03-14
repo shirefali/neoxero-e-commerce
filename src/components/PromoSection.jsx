@@ -19,7 +19,7 @@ const PromoSection = () => {
         {/* picture  */}
         <div className="relative rounded-2xl w-full overflow-hidden max-h-[500px]">
           <img
-            src="../public/promotion.png"
+            src="/promotion.png"
             alt="promo-image"
             className="w-full h-full object-cover"
           />

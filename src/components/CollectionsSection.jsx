@@ -9,12 +9,12 @@ const collections = [
   {
     title: "Cashmere Set",
     bgClass: "bg-gradient-to-t from-gray-500 via-gray-200 to-gray-transparent",
-    src: "../public/collection-1.png",
+    src: "/collection-1.png",
   },
   {
     title: "The New Nordic",
     bgClass: "bg-gradient-to-t from-gray-500 via-gray-200 to-gray-transparent",
-    src: "../public/collection-2.png",
+    src: "/collection-2.png",
   },
   {
     title: "The Leather",
