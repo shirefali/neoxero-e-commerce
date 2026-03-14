@@ -57,7 +57,7 @@ const CategoriesSection = () => {
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-18">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-18">
             {categories.map((category) => {
               const imageSrc = getImageForCategory(category);
               const slug = categoryNameToSlug(category);

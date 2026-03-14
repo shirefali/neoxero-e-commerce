@@ -1,16 +1,92 @@
-# React + Vite
+# Neoxero E-Commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive e-commerce frontend built with React and Vite. Browse products by category, manage a shopping cart and favourites, and explore curated sections (Just In, Low Price, Collections, and more).
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** – UI library
+- **Vite 7** – build tool and dev server
+- **React Router 7** – client-side routing
+- **Tailwind CSS 4** – styling
+- **Swiper** – carousels and sliders
+- **Lucide React** – icons
 
-## React Compiler
+## Features
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **Home page** – Hero, trending brands, categories, collections, Just In, Low Price, promo, articles, news feed, and services
+- **Category products** – Product listing filtered by category (`/category/:categorySlug`)
+- **Favourites** – Saved items page (`/favourites`)
+- **Contact** – Contact page (`/contact`)
+- **Cart** – Slide-out cart drawer; add/remove items and see totals
+- **Global state** – Products (from API), cart, and favourites via React Context
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── components/       # Reusable UI (Navbar, Footer, CartDrawer, Hero, sections…)
+├── context/          # CartContext, FavouritesContext, ProductsContext
+├── pages/            # HomePage, CategoryProductsPage, FavouritesPage, ContactPage
+├── utils/            # Helpers (e.g. categorySlug)
+├── App.jsx           # Routes and providers
+├── App.css           # Global styles
+└── main.jsx          # Entry point, BrowserRouter
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm (or yarn/pnpm)
+
+### Install
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Runs the app at [http://localhost:5173](http://localhost:5173) (or the port Vite shows).
+
+### Build
+
+```bash
+npm run build
+```
+
+Output is in `dist/`.
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## Data Source
+
+Product and category data is loaded from [Fake Store API](https://fakestoreapi.com/) in `ProductsContext`. Cart and favourites are stored in memory (no backend).
+
+## Routes
+
+| Path | Page |
+|------|------|
+| `/` | Home |
+| `/category/:categorySlug` | Category products |
+| `/favourites` | Favourites |
+| `/contact` | Contact |
+
+## License
+
+Private project.
