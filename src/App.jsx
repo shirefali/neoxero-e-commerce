@@ -1,33 +1,35 @@
 import "./App.css";
-import ArticlesSection from "./components/ArticlesSection";
-import CategoriesSection from "./components/CategoriesSection";
-import CollectionsSection from "./components/CollectionsSection";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import LowPriceSection from "./components/LowPriceSection";
-import Navbar from "./components/Nabar";
-import NewsFeedSection from "./components/NewsFeedSection";
-import OurServiceSection from "./components/OurServiceSection";
-import PromoSection from "./components/PromoSection";
-import SaleSection from "./components/SaleSection";
-import TrendingBrandsSection from "./components/TrendingBrandsSection";
+import CartDrawer from "./components/CartDrawer";
+import Layout from "./components/Layout";
+import { CartProvider } from "./context/CartContext";
+import { FavouritesProvider } from "./context/FavouritesContext";
+import { ProductsProvider } from "./context/ProductsContext";
+import CategoryProductsPage from "./pages/CategoryProductsPage";
+import ContactPage from "./pages/ContactPage";
+import FavouritesPage from "./pages/FavouritesPage";
+import HomePage from "./pages/HomePage";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <SaleSection />
-      <Navbar />
-      <Hero />
-      <TrendingBrandsSection />
-      <CategoriesSection />
-      <CollectionsSection />
-      <LowPriceSection />
-      <PromoSection />
-      <ArticlesSection />
-      <NewsFeedSection />
-      <OurServiceSection />
-      <Footer />
-    </>
+    <ProductsProvider>
+      <CartProvider>
+        <FavouritesProvider>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<HomePage />} />
+              <Route
+                path="/category/:categorySlug"
+                element={<CategoryProductsPage />}
+              />
+              <Route path="/favourites" element={<FavouritesPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Route>
+          </Routes>
+          <CartDrawer />
+        </FavouritesProvider>
+      </CartProvider>
+    </ProductsProvider>
   );
 }
 
