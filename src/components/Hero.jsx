@@ -1,8 +1,8 @@
 const Hero = () => {
   return (
-    <section className="min-h-[40vh] bg-[#FF6B6B] overflow-hidden relative">
-      <div className="container mx-auto px-4 flex flex-col items-center lg:flex-row min-h-[40vh]">
-        <div className="flex-1 flex flex-col justify-center py-12 lg:py-0">
+    <section className="bg-[#FF6B6B] overflow-hidden relative">
+      <div className="container mx-auto px-4 flex flex-col items-center lg:flex-row">
+        <div className="flex-1 flex flex-col justify-center py-12 lg:py-12">
           <h1 className="text-white font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight">
             Unveil Your Style,
             <br />
@@ -18,11 +18,17 @@ const Hero = () => {
           </button>
         </div>
 
-        <div className="flex-1 relative w-full lg-mt-0 min-h-[60vh] lg:min-h-[70vh]">
-          <div className="absolute right-0 bottom-[-100px] w-120 h-120 rounded-full bg-[#066176]"></div>
-          <div className="absolute right-0 bottom-50 sm:bottom-30 md:right-[-70px] w-80 h-70 md:w-90 md:h-90 border-8 border-[#066176] z-0"></div>
-          <div className="absolute inset-0 z-3 flex items-end justify-center md:right-[-300px] pl-8 lg:pl-30">
-            <img src="/hero-img.png" alt="hero-image" />
+        <div className="flex-1 relative w-full aspect-[4/3] lg:aspect-[1/1] xl:aspect-[4/3]">
+          <div className="absolute left-[15%] bottom-[-20%] w-[70%] aspect-square rounded-full bg-[#066176] -z-0"></div>
+
+          <div className="absolute right-[5%] bottom-[15%] w-[50%] aspect-square border-8 border-[#066176] -z-0"></div>
+
+          <div className="absolute inset-0 flex items-end justify-center lg:justify-end">
+            <img
+              src="/hero-img.png"
+              alt="hero-image"
+              className="h-full w-auto object-contain object-bottom"
+            />
           </div>
         </div>
       </div>

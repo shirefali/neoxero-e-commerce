@@ -20,14 +20,19 @@ const CategoriesSection = () => {
   } = useProducts();
 
   const getImageForCategory = (categoryName) => {
-    const product = products.find((p) => p.category === categoryName);
+    if (!categoryName || !products.length) return null;
+    const normalized = String(categoryName).toLowerCase().trim();
+    const product = products.find(
+      (p) =>
+        p.category && String(p.category).toLowerCase().trim() === normalized
+    );
     return product?.image ?? null;
   };
 
   if (categoriesError) {
     return (
-      <section className="py-16 px-4">
-        <div className="container mx-auto text-center">
+      <section className="py-16">
+        <div className="container mx-auto px-4 text-center">
           <p className="text-gray-600">{categoriesError}</p>
           <button
             type="button"
@@ -42,40 +47,44 @@ const CategoriesSection = () => {
   }
 
   return (
-    <section className="py-16 px-4">
-      <div className="container mx-auto">
-        <h2 className="text-center font-medium text-2xl md:text-4xl mb-10">
+    <section className="py-16">
+      <div className="container mx-auto px-4">
+        <h2 className="text-center font-medium text-2xl md:text-3xl mb-10">
           Shop by Categories
         </h2>
         {categoriesLoading ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((i) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} className="flex flex-col items-center">
-                <div className="w-24 h-24 md:w-28 md:h-28 lg:w-35 lg:h-35 rounded-full bg-gray-200 animate-pulse" />
+                <div className="w-24 h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 rounded-full bg-gray-200 animate-pulse" />
                 <div className="mt-4 h-4 w-20 bg-gray-200 rounded animate-pulse" />
               </div>
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-18">
-            {categories.map((category) => {
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
+            {Array.from(
+              { length: 6 },
+              (_, i) => categories[i % categories.length]
+            ).map((category, i) => {
               const imageSrc = getImageForCategory(category);
               const slug = categoryNameToSlug(category);
               return (
                 <Link
-                  key={category}
+                  key={`${category}-${i}`}
                   to={`/category/${slug}`}
                   className="flex flex-col items-center hover:opacity-90 transition-opacity cursor-pointer"
                 >
-                  <div className="w-24 h-24 md:w-28 md:h-28 lg:w-35 lg:h-35 rounded-full bg-gray-200 overflow-hidden mb-4">
+                  <div className="w-24 h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 rounded-full bg-gray-200 overflow-hidden mb-4 flex-shrink-0 relative">
                     {imageSrc ? (
                       <img
                         src={imageSrc}
                         alt={formatCategoryName(category)}
-                        className="w-full h-full object-cover"
+                        className=" w-full h-full object-contain object-center block"
+                        loading="lazy"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gray-200" />
+                      <div className="absolute inset-0 w-full h-full bg-gray-200" />
                     )}
                   </div>
                   <span className="text-sm md:text-lg text-[#111111] text-center">
