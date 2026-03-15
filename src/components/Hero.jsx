@@ -18,7 +18,7 @@ const Hero = () => {
           </button>
         </div>
 
-        <div className="flex-1 relative w-full aspect-[4/3] lg:aspect-[1/1] xl:aspect-[4/3]">
+        <div className="flex-1 relative w-full aspect-[4/3]">
           <div className="absolute left-[15%] bottom-[-20%] w-[70%] aspect-square rounded-full bg-[#066176] -z-0"></div>
 
           <div className="absolute right-[5%] bottom-[15%] w-[50%] aspect-square border-8 border-[#066176] -z-0"></div>
