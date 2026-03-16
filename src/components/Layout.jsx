@@ -8,7 +8,7 @@ function Layout() {
     <>
       <SaleSection />
       <Navbar />
-      <main>
+      <main className="overflow-hidden">
         <Outlet />
       </main>
       <Footer />

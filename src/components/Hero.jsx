@@ -23,7 +23,7 @@ const Hero = () => {
 
           <div className="absolute right-[5%] bottom-[5%] w-[50%] aspect-square border-6 border-[#066176] -z-0"></div>
 
-          <div className="absolute flex items-end justify-center lg:justify-end left-20">
+          <div className="absolute flex items-end justify-center lg:justify-end left-20 overflow-hidden">
             <img
               src="/hero-img.png"
               alt="hero-image"
