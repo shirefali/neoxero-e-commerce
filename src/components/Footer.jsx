@@ -3,11 +3,11 @@ import { Instagram, Facebook, Youtube, ArrowRight } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-[#f8f9fa] text-gray-700 px-4">
-      <div className="container mx-auto py-12 lg:py-20">
+      <div className="container max-w-[1200px] mx-auto py-12 md:pt-20 md:pb-15">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Column: location & contact us */}
           <div>
-            <h3 className="font-semibold text-[#111111] text-2xl mb-6">
+            <h3 className="font-semibold text-black text-2xl mb-6">
               VisioCreate.
             </h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
@@ -21,33 +21,33 @@ export default function Footer() {
                 href="https//wwww.intagram.com"
                 className=" hover:text-[#c13584] transition-colors"
               >
-                <Instagram size={20} strokeWidth={1.5} />
+                <Instagram className="w-5 h-5" strokeWidth={1.5} />
               </a>
               <a
                 href="https//www.facebook.com"
                 className=" hover:text-[#1877f2] transition-colors"
               >
-                <Facebook size={20} strokeWidth={1.5} />
+                <Facebook className="w-5 h-5" strokeWidth={1.5} />
               </a>
               <a
                 href="https//www.youtube.com"
                 className=" hover:text-[#ff0000] transition-colors"
               >
-                <Youtube size={20} strokeWidth={1.5} />
+                <Youtube className="w-5 h-5" strokeWidth={1.5} />
               </a>
             </div>
           </div>
 
           {/* Column: Page links */}
           <div>
-            <h3 className="font-semibold text-[#11111] text-lg mb-6">Page</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold text-black text-base mb-6">Page</h3>
+            <ul className="space-y-3">
               {["Home", "Shop", "Product", "Articles", "Contact Us"].map(
                 (item) => (
                   <li key={item}>
                     <a
                       href="#"
-                      className="text-gray-600 text-sm hover:text-[#111111] transition-colors"
+                      className="text-gray-500 text-sm hover:text-[#111111] transition-colors"
                     >
                       {item}
                     </a>
@@ -59,14 +59,16 @@ export default function Footer() {
 
           {/* Column: Info links */}
           <div>
-            <h3 className="font-semibold text-[#111111] text-lg mb-6">Info</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold text-[#111111] text-base mb-6">
+              Info
+            </h3>
+            <ul className="space-y-3">
               {["Shipping Policy", "Return & Refund", "Support", "FAQs"].map(
                 (item) => (
                   <li key={item}>
                     <a
                       href="#"
-                      className="text-gray-600 text-sm hover:text-gray-900 transition-colors"
+                      className="text-gray-600 text-sm hover:text-black transition-colors"
                     >
                       {item}
                     </a>
@@ -78,7 +80,7 @@ export default function Footer() {
 
           {/* Column: Newsletter */}
           <div>
-            <h3 className="font-semibold text-[#111111] text-lg mb-6">
+            <h3 className="font-semibold text-[#111111] text-base mb-6">
               Join Newsletter
             </h3>
             <p className="text-gray-500 text-sm mb-4 leading-relaxed">
@@ -105,7 +107,7 @@ export default function Footer() {
 
       {/* Bottom part */}
       <div>
-        <div className="container border-t px-4 border-gray-200 mx-auto py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="container max-w-[1152px] border-t px-4 border-gray-200 mx-auto pb-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-center text-sm order-2 sm:order-1">
             Copyright © 2023 VisioCreate. All rights reserved.
           </p>

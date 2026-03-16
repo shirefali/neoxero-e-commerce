@@ -13,22 +13,20 @@ const NewsFeedSection = () => {
   ];
 
   return (
-    <section className="bg-white py-16 px-4">
-      <div className="container mx-auto">
-        <div className="text-center mb-10">
-          <p className="text-sm font-semibold uppercase text-gray-600 mb-2">
+    <section className="bg-white px-4">
+      <div className="container max-w-[1200px] mx-auto py-20">
+        <div className="text-center mb-2">
+          <p className="text-xs font-semibold uppercase text-gray-600 tracking-[1px] mb-2">
             Newsfeed
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">Instagram</h2>
-          <p className="text-gray-600 text-lg md:text-xl mb-6">
+          <h2 className="text-3xl md:text-[32px] font-bold mb-2">Instagram</h2>
+          <p className="text-gray-600 text-base mb-6">
             Follow us on social media for more discount & promotions
           </p>
-          <p className="text-gray-600 text-lg md:text-xl">
-            @VisioCreate_official
-          </p>
+          <p className="text-gray-600 text-base ">@VisioCreate_official</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 lg:gap-20 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full py-6">
           {newsFeedPics.map((pic) => (
             <div
               key={pic.id}

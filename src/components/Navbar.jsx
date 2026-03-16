@@ -97,7 +97,7 @@ const Navbar = () => {
 
   return (
     <nav ref={navRef}>
-      <div className="container flex items-center justify-between bg-white mx-auto px-4 py-8 relative">
+      <div className="container max-w-[1200px] flex items-center justify-between bg-white mx-auto px-6 py-5 relative">
         <div className="flex items-center gap-3">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -112,13 +112,13 @@ const Navbar = () => {
           </button>
           <RouterLink
             to="/"
-            className="text-2xl md:text-3xl font-bold cursor-pointer"
+            className="text-2xl font-bold cursor-pointer tracking-[-0.5px]"
           >
             VisioCreate.
           </RouterLink>
         </div>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           {navLinks.map((item) => {
             if (item.isDropdown && item.dropdownKey) {
               return (

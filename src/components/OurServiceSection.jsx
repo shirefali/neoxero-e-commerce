@@ -3,8 +3,8 @@ import ServiceCard from "./ServiceCard";
 
 const OurServiceSection = () => {
   return (
-    <section className="py-16 px-4">
-      <div className="container mx-auto py-15 border-t border-gray-200">
+    <section className=" px-4">
+      <div className="container max-w-[1152px] mx-auto py-15 border-t border-gray-200">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <ServiceCard
             icon={<Truck />}

@@ -3,17 +3,17 @@ import ArticlesCard from "./ArticlesCard";
 
 const ArticlesSection = () => {
   return (
-    <section className=" py-20 px-4 md:px-6 lg:px-8">
-      <div className="container mx-auto">
+    <section className="px-4">
+      <div className="container max-w-[1200px] mx-auto py-20">
         {/* section title  */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
-          <h2 className="text-3xl md:text-3xl font-bold text-black">
+          <h2 className="text-3xl md:text-[28px] font-bold text-black">
             Latest Articles
           </h2>
-          <button className="text-black underline cursor-pointer font-medium self-start sm:self-center flex gap-2">
+          <button className="text-black underline cursor-pointer font-sm self-start sm:self-center flex items-center gap-1">
             View More
             <span>
-              <ArrowRight />
+              <ArrowRight className="w-[14px] h-[14px]" />
             </span>
           </button>
         </div>

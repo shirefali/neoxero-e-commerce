@@ -31,8 +31,8 @@ const CategoriesSection = () => {
 
   if (categoriesError) {
     return (
-      <section className="py-16">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20">
+        <div className="container mx-auto text-center">
           <p className="text-gray-600">{categoriesError}</p>
           <button
             type="button"
@@ -47,9 +47,9 @@ const CategoriesSection = () => {
   }
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-center font-medium text-2xl md:text-3xl mb-10">
+    <section className="py-20 px-4">
+      <div className="container max-w-[1200px] mx-auto">
+        <h2 className="text-center font-bold text-2xl md:text-[28px] mb-10">
           Shop by Categories
         </h2>
         {categoriesLoading ? (
@@ -62,7 +62,7 @@ const CategoriesSection = () => {
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-18">
             {Array.from(
               { length: 6 },
               (_, i) => categories[i % categories.length]
@@ -75,19 +75,19 @@ const CategoriesSection = () => {
                   to={`/category/${slug}`}
                   className="flex flex-col items-center hover:opacity-90 transition-opacity cursor-pointer"
                 >
-                  <div className="w-24 h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 rounded-full bg-gray-200 overflow-hidden mb-4 flex-shrink-0 relative">
+                  <div className="w-24 h-24  md:w-35 md:h-35 rounded-full bg-gray-200 overflow-hidden mb-4 flex-shrink-0 relative">
                     {imageSrc ? (
                       <img
                         src={imageSrc}
                         alt={formatCategoryName(category)}
-                        className=" w-full h-full object-contain object-center block"
+                        className="w-full h-full object-contain object-center block"
                         loading="lazy"
                       />
                     ) : (
                       <div className="absolute inset-0 w-full h-full bg-gray-200" />
                     )}
                   </div>
-                  <span className="text-sm md:text-lg text-[#111111] text-center">
+                  <span className="text-sm text-black text-center font-medium">
                     {formatCategoryName(category)}
                   </span>
                 </Link>

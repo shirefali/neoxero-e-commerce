@@ -10,11 +10,11 @@ const ArticlesCard = ({ src }) => {
           className="w-full h-full hover:scale-105 transition-transform duration-300"
         />
       </div>
-      <h2 className="text-2xl font-semibold mb-2">2023 holiday gift guide</h2>
-      <button className="capitalize flex gap-2 underline cursor-pointer">
+      <h2 className="text-base font-semibold mb-2">2023 holiday gift guide</h2>
+      <button className="capitalize flex gap-1 font-medium text-xs underline cursor-pointer">
         read more
         <span>
-          <ArrowRight />
+          <ArrowRight className="w-[14px] h-[14px]" />
         </span>
       </button>
     </div>

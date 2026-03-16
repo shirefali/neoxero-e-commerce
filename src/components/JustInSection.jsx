@@ -33,12 +33,10 @@ const JustInSection = () => {
   }
 
   return (
-    <section className="bg-white py-16 px-4 overflow-hidden">
-      <div className="container mx-auto">
+    <section className="bg-white px-4 py-20 overflow-hidden">
+      <div className="container max-w-[1200px] mx-auto ">
         <div className="flex flex-row justify-between items-center mb-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Just In
-          </h2>
+          <h2 className="text-3xl md:text-[28px] mb-10 font-bold">Just In</h2>
           {!loading && products.length > 0 && pageCount > 0 && (
             <>
               {/* Mobile: arrows only */}
@@ -63,7 +61,7 @@ const JustInSection = () => {
                 </button>
               </div>
               {/* Desktop: dots only */}
-              <div className="hidden md:flex justify-end items-center gap-2">
+              <div className="hidden md:flex justify-end items-center gap-4">
                 {Array.from({ length: pageCount }).map((_, i) => (
                   <button
                     key={i}
@@ -83,8 +81,8 @@ const JustInSection = () => {
                     }}
                     className={`w-2 h-2 rounded-full border transition-colors cursor-pointer ${
                       i === activePage
-                        ? "bg-gray-900 border-gray-900"
-                        : "bg-transparent border-gray-300 hover:border-gray-400"
+                        ? "bg-black border-gray-900"
+                        : "bg-gray-200 border-gray-300 hover:border-gray-400"
                     }`}
                     aria-label={`Go to page ${i + 1}`}
                   />
